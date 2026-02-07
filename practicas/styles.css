@@ -1,0 +1,154 @@
+body {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 5vw;
+    border-bottom: red 3px solid
+}
+
+
+.logo > img {
+    height: 120px;
+    max-width: 100%;
+}
+
+.notice {
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 22px;
+    font-style: oblique;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(imagenes/SUPRA-3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: blueviolet 6px solid
+}
+
+.teaser {
+    background-color: black;
+    border-bottom: blueviolet 4px solid;
+    padding-bottom: 51px
+}
+
+.teaser > h1 {
+    color: blueviolet;
+    font-family: 'Bebas Neue';
+    font-size: 50px;
+    font-style: oblique;
+    text-align: center;
+    padding-top: 20px
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 80px 5vw;
+    overflow-x: hidden;
+}
+
+.teaser1 {
+    background: blueviolet;
+    padding: 54px;
+    transform: skew(-12deg);
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 40px
+}
+
+.teaser1 > iframe {
+    transform: skew(12deg);
+    padding-bottom: 4px
+}
+
+.teaser2 {
+    background: blueviolet;
+    padding: 54px;
+    transform: skew(-12deg);
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 40px
+}
+
+.teaser2 > iframe {
+    transform: skew(12deg);
+    padding-bottom: 4px
+}
+
+.site-footer {
+    background: #0b0b12;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 40px 5vw;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 10px 0;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+}
+
+.site-footer .credit span {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.credit {
+    font-family: 'Bebas Neue';
+    font-style: oblique;
+}
+
+.legal {
+    font-family: sans-serif
+}
+
+@media (max-width: 1024px) {
+    header {
+        justify-content: center;
+    }
+
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .teaser1 {
+        padding: 20px;
+    }
+
+    .teaser1 > iframe {
+        width: 290px;
+        height: 190px
+    }
+
+    .teaser2 {
+        padding: 25px
+    }
+
+    .teaser2 > iframe {
+        width: 290px;
+        height: 190px
+    }
+}
