@@ -6,19 +6,23 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 10px 5vw;
-    border-bottom: red 3px solid
+    padding: 15px 5vw;
+    border-bottom: blueviolet 3px solid;
+    box-sizing: border-box;
 }
 
 
 .logo > img {
-    height: 120px;
+    height: 65px;
     max-width: 100%;
 }
 
@@ -30,12 +34,35 @@ header {
 }
 
 .hero {
+    position: relative;
     height: 100vh;
-    background-image: url(imagenes/SUPRA-3.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: hidden;
     border-bottom: blueviolet 6px solid
+}
+
+.lightleaks {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo2 {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%
+}
+
+.logo2 img {
+    position: absolute;
+    width: 90%
 }
 
 .teaser {
@@ -62,18 +89,22 @@ header {
 }
 
 .teaser1 {
+    position: relative;
     background: blueviolet;
     padding: 54px;
     transform: skew(-12deg);
     text-align: center;
     font-family: 'Bebas Neue';
-    font-size: 40px
+    font-size: 40px;
 }
 
 .teaser1 > iframe {
     transform: skew(12deg);
-    padding-bottom: 4px
+    padding-bottom: 0px;
+    box-shadow: black 1px 0px 42px 20px;
 }
+
+
 
 .teaser2 {
     background: blueviolet;
@@ -86,7 +117,7 @@ header {
 
 .teaser2 > iframe {
     transform: skew(12deg);
-    padding-bottom: 4px
+    box-shadow: black 1px 0px 42px 20px;
 }
 
 .site-footer {
@@ -103,7 +134,6 @@ header {
 
 .site-footer p {
     margin: 10px 0;
-    font-size: 0.85rem;
     color: rgba(255,255,255,0.6);
     line-height: 1.6;
 }
@@ -117,13 +147,15 @@ header {
 .credit {
     font-family: 'Bebas Neue';
     font-style: oblique;
+    font-size: 1.55rem
 }
 
 .legal {
-    font-family: sans-serif
+    font-family: sans-serif;
+    font-size: 0.85rem
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     header {
         justify-content: center;
     }
@@ -150,5 +182,16 @@ header {
     .teaser2 > iframe {
         width: 290px;
         height: 190px
+    }
+}
+
+@media (orientation: landscape) {
+    .logo > img {
+        height: 55px;
+        max-width: 100%;
+    }
+
+    .logo2 > img {
+        width: 60%
     }
 }
